@@ -14,6 +14,11 @@
 		D05D86DB205681D9003909EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D05D86D9205681D9003909EB /* LaunchScreen.storyboard */; };
 		D05D86E6205681D9003909EB /* Athlete_HQTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05D86E5205681D9003909EB /* Athlete_HQTests.swift */; };
 		D05D86F120569113003909EB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05D86F020569113003909EB /* MainTabBarController.swift */; };
+		D05D86F520578E2D003909EB /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05D86F420578E2D003909EB /* HomePageViewController.swift */; };
+		D05D86FA20578F3F003909EB /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05D86F920578F3F003909EB /* FeedTableViewController.swift */; };
+		D05D86FC20578F88003909EB /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05D86FB20578F88003909EB /* MessageTableViewController.swift */; };
+		D05D86FE2057DB28003909EB /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05D86FD2057DB28003909EB /* FeedTableViewCell.swift */; };
+		D05D87002057DB4E003909EB /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05D86FF2057DB4E003909EB /* MessageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,11 @@
 		D05D86E5205681D9003909EB /* Athlete_HQTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Athlete_HQTests.swift; sourceTree = "<group>"; };
 		D05D86E7205681D9003909EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D05D86F020569113003909EB /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		D05D86F420578E2D003909EB /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		D05D86F920578F3F003909EB /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		D05D86FB20578F88003909EB /* MessageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
+		D05D86FD2057DB28003909EB /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		D05D86FF2057DB4E003909EB /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +90,11 @@
 			isa = PBXGroup;
 			children = (
 				D05D86D0205681D9003909EB /* AppDelegate.swift */,
+				D05D86F420578E2D003909EB /* HomePageViewController.swift */,
+				D05D86F920578F3F003909EB /* FeedTableViewController.swift */,
+				D05D86FB20578F88003909EB /* MessageTableViewController.swift */,
+				D05D86FD2057DB28003909EB /* FeedTableViewCell.swift */,
+				D05D86FF2057DB4E003909EB /* MessageTableViewCell.swift */,
 				D05D86D2205681D9003909EB /* ViewController.swift */,
 				D05D86D4205681D9003909EB /* Main.storyboard */,
 				D05D86F020569113003909EB /* MainTabBarController.swift */,
@@ -202,8 +217,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D05D86F520578E2D003909EB /* HomePageViewController.swift in Sources */,
 				D05D86D3205681D9003909EB /* ViewController.swift in Sources */,
+				D05D86FE2057DB28003909EB /* FeedTableViewCell.swift in Sources */,
+				D05D86FA20578F3F003909EB /* FeedTableViewController.swift in Sources */,
 				D05D86D1205681D9003909EB /* AppDelegate.swift in Sources */,
+				D05D87002057DB4E003909EB /* MessageTableViewCell.swift in Sources */,
+				D05D86FC20578F88003909EB /* MessageTableViewController.swift in Sources */,
 				D05D86F120569113003909EB /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
