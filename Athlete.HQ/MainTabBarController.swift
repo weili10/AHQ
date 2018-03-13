@@ -7,3 +7,15 @@
 //
 
 import Foundation
+import UIKit
+
+class MainTabBarController: UITabBarController {
+    
+    var username: String?
+    var password: String?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+}
