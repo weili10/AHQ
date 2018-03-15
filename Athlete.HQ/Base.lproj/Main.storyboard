@@ -179,18 +179,61 @@
         <scene sceneID="Tvl-Zw-e87">
             <objects>
                 <tableViewController storyboardIdentifier="FeedTableViewController" id="abt-oR-EYD" customClass="FeedTableViewController" customModule="Athlete_HQ" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QXR-df-hEJ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="180" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QXR-df-hEJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="28U-1q-OFA" customClass="FeedTableViewCell" customModule="Athlete_HQ" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedTableViewCell" rowHeight="180" id="28U-1q-OFA" customClass="FeedTableViewCell" customModule="Athlete_HQ" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="180"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="28U-1q-OFA" id="7vM-JR-C3v">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="179.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dDC-7z-P96">
+                                            <rect key="frame" x="16" y="11" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="o8h-4N-VaA"/>
+                                                <constraint firstAttribute="height" constant="50" id="tFw-H5-zIh"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAK-wh-cS9">
+                                            <rect key="frame" x="82" y="21" width="277" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="oaE-Ix-mnf"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zqc-Qh-zkd">
+                                            <rect key="frame" x="16" y="69" width="343" height="100"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="Hvf-kH-4J1"/>
+                                            </constraints>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="zqc-Qh-zkd" firstAttribute="trailing" secondItem="7vM-JR-C3v" secondAttribute="trailingMargin" id="AiC-D8-LLQ"/>
+                                        <constraint firstItem="TAK-wh-cS9" firstAttribute="trailing" secondItem="7vM-JR-C3v" secondAttribute="trailingMargin" id="DzN-s2-ker"/>
+                                        <constraint firstItem="zqc-Qh-zkd" firstAttribute="leading" secondItem="7vM-JR-C3v" secondAttribute="leadingMargin" id="Feb-RG-jDY"/>
+                                        <constraint firstItem="dDC-7z-P96" firstAttribute="leading" secondItem="7vM-JR-C3v" secondAttribute="leadingMargin" id="LIl-RT-9Pc"/>
+                                        <constraint firstItem="TAK-wh-cS9" firstAttribute="leading" secondItem="dDC-7z-P96" secondAttribute="trailing" constant="16" id="Xrq-Xz-UDy"/>
+                                        <constraint firstItem="dDC-7z-P96" firstAttribute="top" secondItem="7vM-JR-C3v" secondAttribute="topMargin" id="o1Z-FQ-W2m"/>
+                                        <constraint firstItem="TAK-wh-cS9" firstAttribute="top" secondItem="7vM-JR-C3v" secondAttribute="topMargin" constant="10" id="uSu-Aj-9DJ"/>
+                                        <constraint firstItem="zqc-Qh-zkd" firstAttribute="bottom" secondItem="7vM-JR-C3v" secondAttribute="bottomMargin" id="vRz-Tb-ekx"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="FeedCellImageView" destination="dDC-7z-P96" id="jMr-Va-HqF"/>
+                                    <outlet property="FeedCellNameLabel" destination="TAK-wh-cS9" id="rQK-33-xLe"/>
+                                    <outlet property="FeedCellTextView" destination="zqc-Qh-zkd" id="Jht-YZ-1hp"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -200,12 +243,12 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Feed" id="CND-5S-dhV"/>
                     <connections>
-                        <outlet property="FeedTableView" destination="QXR-df-hEJ" id="KWG-Gd-ktp"/>
+                        <outlet property="FeedTableView" destination="QXR-df-hEJ" id="jKA-xx-TDM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTo-AO-4ZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2826" y="-725"/>
+            <point key="canvasLocation" x="2888.8000000000002" y="-743.47826086956525"/>
         </scene>
         <!--Message-->
         <scene sceneID="MsT-ui-BDX">
@@ -336,10 +379,10 @@
             </objects>
             <point key="canvasLocation" x="-731.20000000000005" y="774.51274362818594"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Feed Navigation Controller-->
         <scene sceneID="3UJ-I9-20I">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="626-Ie-Qlf" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FeedNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="626-Ie-Qlf" customClass="FeedNavigationController" customModule="Athlete_HQ" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1GO-nq-kE5">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -354,10 +397,10 @@
             </objects>
             <point key="canvasLocation" x="2006" y="-743"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Message Navigation Controller-->
         <scene sceneID="aKc-pk-c6f">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m7A-Gk-zCF" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MessageNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="m7A-Gk-zCF" customClass="MessageNavigationController" customModule="Athlete_HQ" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7vX-SO-Sta">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+import UIKit
+
+class Feed {
+    var name: String
+    var photo: UIImage?
+    var text: String
+    
+    init?(name: String, photo: UIImage?, text: String) {
+        if name.isEmpty || text.isEmpty {
+            return nil
+        }
+        
+        self.name = name
+        self.photo = photo
+        self.text = text
+    }
+}

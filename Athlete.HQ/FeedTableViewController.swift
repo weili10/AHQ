@@ -10,13 +10,10 @@ import UIKit
 
 class FeedTableViewController: UITableViewController{
 
-    @IBOutlet weak var FeedTableView: UITableView!
+    @IBOutlet var FeedTableView: UITableView!
     
-    let feedId = [1,2,3]
-    let feedName = ["Jack","Peter","Coach"]
-    let feedContent = ["You have complete all scheduled training tasks for today!",
-                       "Just breaking my own dead lift record XD",
-                       "You've done well today, could add 10kg tomorrow. Have a good rest"]
+    var sampleFeeds = [Feed]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +21,7 @@ class FeedTableViewController: UITableViewController{
         FeedTableView.delegate = self
         FeedTableView.dataSource = self
 
+        loadSampleFeeds()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -31,32 +29,59 @@ class FeedTableViewController: UITableViewController{
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//        // Dispose of any resources that can be recreated.
+//    }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return sampleFeeds.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell", for: indexPath) as? FeedTableViewCell else {
+            fatalError("The dequeued cell is not an instance of FeedTableViewCell.")
+        }
+        let feed = sampleFeeds[indexPath.row]
+        
+        cell.FeedCellNameLabel.text = feed.name
+        cell.FeedCellTextView.text = feed.text
+        cell.FeedCellImageView.image = feed.photo
+        
         return cell
     }
-    */
+ 
+    private func loadSampleFeeds(){
+        let feedName = ["Jack","Peter","Coach"]
+        let feedContent = ["You have complete all scheduled training tasks for today!",
+                           "Just breaking my own dead lift record XD",
+                           "You've done well today, could add 10kg tomorrow. Have a good rest"]
+        let photo0 = UIImage(named: feedName[0])
+        let photo1 = UIImage(named: feedName[1])
+        let photo2 = UIImage(named: feedName[2])
+        
+        guard let feed0 = Feed(name: feedName[0], photo: photo0, text: feedContent[0]) else {
+            fatalError("Unable to instantiate meal1")
+        }
+        guard let feed1 = Feed(name: feedName[1], photo: photo1, text: feedContent[1]) else {
+            fatalError("Unable to instantiate meal1")
+        }
+        guard let feed2 = Feed(name: feedName[2], photo: photo2, text: feedContent[2]) else {
+            fatalError("Unable to instantiate meal1")
+        }
+                    
+        sampleFeeds += [feed0,feed1,feed2]
+    }
 
     /*
     // Override to support conditional editing of the table view.

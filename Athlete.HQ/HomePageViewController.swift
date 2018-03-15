@@ -10,8 +10,8 @@ import UIKit
 
 class HomePageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     lazy var subViewControllers:[UIViewController] = {
-        return [ self.newVC(viewController: "FeedTableViewController"),
-                 self.newVC(viewController: "MessageTableViewController")
+        return [ self.newVC(viewController: "FeedNavigationController"),
+                 self.newVC(viewController: "MessageNavigationController")
         ]
     }()
 

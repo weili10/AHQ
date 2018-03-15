@@ -9,7 +9,11 @@
 import UIKit
 
 class FeedTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var FeedCellImageView: UIImageView!
+    @IBOutlet weak var FeedCellNameLabel: UILabel!
+    @IBOutlet weak var FeedCellTextView: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
